@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #263B30;
+  --color-sage: #87977B;
+  --color-olive: #B8B99A;
+  --color-ivory: #F7F6EF;
+  --color-beige: #E9E4D8;
+  --color-charcoal: #303B32;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 500; letter-spacing: -0.01em; }
+  :focus-visible { outline: 2px solid var(--color-sage); outline-offset: 3px; }
+}
+
+@layer components {
+  .eyebrow {
+    font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--color-sage); font-weight: 500;
+  }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 0.95rem 1.9rem; font-size: 0.72rem; letter-spacing: 0.2em;
+    text-transform: uppercase; font-weight: 500; transition: all .35s ease;
+    border: 1px solid transparent; cursor: pointer;
+  }
+  .btn-primary { background: var(--color-forest); color: var(--color-ivory); }
+  .btn-primary:hover { background: var(--color-charcoal); }
+  .btn-outline { border-color: var(--color-forest); color: var(--color-forest); }
+  .btn-outline:hover { background: var(--color-forest); color: var(--color-ivory); }
+  .btn-light { background: var(--color-ivory); color: var(--color-forest); }
+  .btn-light:hover { background: var(--color-beige); }
+  .link-line {
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    border-bottom: 1px solid currentColor; padding-bottom: 2px;
+  }
+  .img-wrap { overflow: hidden; background: var(--color-beige); position: relative; }
+  .img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s ease; }
+  .group:hover .img-wrap img { transform: scale(1.05); }
+  .img-fallback { background: linear-gradient(135deg, var(--color-beige), var(--color-olive)); }
+  .img-fallback img { visibility: hidden; }
+}
+
+/* Scroll reveal */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  * { animation: none !important; }
+}

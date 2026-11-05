@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OLIVÉRA | Premium Botanical Skincare</title>
+  <meta name="description" content="OLIVÉRA is a premium botanical skincare brand. Nature, Nurtured Into Beauty." />
+  <meta name="theme-color" content="#263B30" />
+  <meta property="og:title" content="OLIVÉRA | Botanical Skincare" />
+  <meta property="og:description" content="Nature, Nurtured Into Beauty. Premium botanical skincare." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23263B30'/%3E%3Cpath d='M8 24 C12 16 18 10 24 8' stroke='%23F7F6EF' fill='none' stroke-width='1.5'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/output.css" />
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] bg-forest text-ivory px-4 py-2">Skip to content</a>
+
+  <!-- A. Announcement bar -->
+  <div class="bg-forest text-ivory text-center py-2.5 px-4">
+    <p class="text-[0.62rem] sm:text-[0.7rem] tracking-[0.22em] uppercase">A little nature, a lot of glow — Free shipping over $75</p>
+  </div>
+
+  <!-- B. Navigation -->
+  <header class="sticky top-0 z-40 bg-ivory/90 backdrop-blur border-b border-beige">
+    <nav class="mx-auto max-w-7xl px-5 lg:px-10 h-20 flex items-center justify-between" aria-label="Main">
+      <button id="menu-btn" class="lg:hidden p-2 -ml-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+
+      <a href="#home" class="flex items-center gap-3 text-forest" aria-label="OLIVÉRA home">
+        <svg width="30" height="30" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+          <path d="M8 34 C13 22 22 12 33 6"/>
+          <path d="M14 26 C10 25 8 22 8 19 C12 19 14 22 14 26Z"/>
+          <path d="M19 20 C15 19 13 16 13 13 C17 13 19 16 19 20Z"/>
+          <path d="M25 14 C21 13 19 10 19 7 C23 7 25 10 25 14Z"/>
+          <path d="M20 28 C24 28 27 26 28 23 C24 22 21 24 20 28Z"/>
+          <path d="M26 22 C30 21 32 18 33 15 C29 15 27 18 26 22Z"/>
+        </svg>
+        <span class="leading-none">
+          <span class="block font-serif text-2xl sm:text-[1.7rem] tracking-[0.28em]">OLIVÉRA</span>
+          <span class="block text-[0.5rem] tracking-[0.42em] text-sage mt-1">BOTANICAL SKINCARE</span>
+        </span>
+      </a>
+
+      <ul class="hidden lg:flex items-center gap-10 text-[0.72rem] tracking-[0.2em] uppercase">
+        <li><a class="hover:text-sage transition" href="#home">Home</a></li>
+        <li><a class="hover:text-sage transition" href="#categories">Shop</a></li>
+        <li><a class="hover:text-sage transition" href="#bestsellers">Best Sellers</a></li>
+        <li><a class="hover:text-sage transition" href="#philosophy">Our Philosophy</a></li>
+        <li><a class="hover:text-sage transition" href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="flex items-center gap-1">
+        <button id="search-btn" class="p-2" aria-label="Search products">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <button id="cart-btn" class="p-2 relative" aria-label="Open shopping bag" aria-controls="cart-drawer">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span id="cart-count" class="absolute -top-0.5 -right-0.5 min-w-[1.1rem] h-[1.1rem] px-1 rounded-full bg-forest text-ivory text-[0.62rem] flex items-center justify-center">0</span>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-beige bg-ivory">
+      <ul class="px-5 py-6 space-y-5 text-xs tracking-[0.2em] uppercase">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#categories">Shop</a></li>
+        <li><a href="#bestsellers">Best Sellers</a></li>
+        <li><a href="#philosophy">Our Philosophy</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- C. Hero -->
+    <section id="home" class="mx-auto max-w-7xl px-5 lg:px-10 py-12 lg:py-20 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div class="order-2 lg:order-1 reveal">
+        <p class="eyebrow mb-6">Botanical Skincare</p>
+        <h1 class="text-5xl sm:text-6xl xl:text-7xl leading-[1.02] text-forest">Let Nature Reveal Your <em class="text-sage">Natural</em> Glow.</h1>
+        <p class="mt-7 max-w-md text-base leading-relaxed text-charcoal/80">Discover thoughtfully curated botanical skincare essentials that bring nature and everyday beauty into harmony.</p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+          <a href="#bestsellers" class="btn btn-primary">Shop the Collection</a>
+          <a href="#philosophy" class="btn btn-outline">Our Philosophy</a>
+        </div>
+      </div>
+      <div class="order-1 lg:order-2 relative reveal">
+        <div class="img-wrap aspect-[4/5] sm:aspect-[5/6] lg:aspect-[4/5]">
+          <img data-img="hero" alt="OLIVÉRA skincare collection with botanical leaves in warm natural light" fetchpriority="high" />
+        </div>
+        <div class="hidden sm:block absolute -bottom-6 -left-6 bg-ivory p-5 border border-beige">
+          <p class="font-serif text-xl text-forest">Nature, Nurtured</p>
+          <p class="font-serif italic text-sage text-lg -mt-1">Into Beauty.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- D. Trust -->
+    <section class="border-y border-beige bg-beige/40" aria-label="Brand values">
+      <ul class="mx-auto max-w-7xl px-5 lg:px-10 py-9 grid grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-4">
+        <li class="flex flex-col sm:flex-row items-center sm:gap-4 text-center sm:text-left gap-3">
+          <svg class="text-sage shrink-0" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 32 32"><path d="M6 27C10 17 17 10 27 5"/><path d="M12 21c-4-1-6-4-6-7 4 0 6 3 6 7ZM18 15c-4-1-6-4-6-7 4 0 6 3 6 7Z"/></svg>
+          <span class="text-[0.7rem] tracking-[0.2em] uppercase">Botanical Inspired</span>
+        </li>
+        <li class="flex flex-col sm:flex-row items-center sm:gap-4 text-center sm:text-left gap-3">
+          <svg class="text-sage shrink-0" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 32 32"><path d="M12 4h8v5l4 16a3 3 0 0 1-3 3H11a3 3 0 0 1-3-3l4-16V4Z"/><path d="M10 18h12"/></svg>
+          <span class="text-[0.7rem] tracking-[0.2em] uppercase">Thoughtfully Crafted</span>
+        </li>
+        <li class="flex flex-col sm:flex-row items-center sm:gap-4 text-center sm:text-left gap-3">
+          <svg class="text-sage shrink-0" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 32 32"><circle cx="16" cy="16" r="5"/><path d="M16 3v4M16 25v4M3 16h4M25 16h4M7 7l3 3M22 22l3 3M25 7l-3 3M10 22l-3 3"/></svg>
+          <span class="text-[0.7rem] tracking-[0.2em] uppercase">Everyday Skin Rituals</span>
+        </li>
+        <li class="flex flex-col sm:flex-row items-center sm:gap-4 text-center sm:text-left gap-3">
+          <svg class="text-sage shrink-0" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 32 32"><path d="M16 28c-8-5-12-10-12-15a7 7 0 0 1 12-5 7 7 0 0 1 12 5c0 5-4 10-12 15Z"/></svg>
+          <span class="text-[0.7rem] tracking-[0.2em] uppercase">Naturally Beautiful</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- E. Best Sellers -->
+    <section id="bestsellers" class="mx-auto max-w-7xl px-5 lg:px-10 py-20 lg:py-28">
+      <div class="text-center max-w-xl mx-auto reveal">
+        <p class="eyebrow mb-4">Best Sellers</p>
+        <h2 class="text-4xl sm:text-5xl text-forest">The Art of Everyday Skincare</h2>
+        <p class="mt-4 text-charcoal/75">Discover the essentials your skin will love.</p>
+      </div>
+      <div id="product-grid" class="mt-14 grid grid-cols-1 min-[480px]:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12"></div>
+    </section>
+
+    <!-- F. Categories -->
+    <section id="categories" class="bg-beige/50 py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-10">
+        <div class="text-center max-w-xl mx-auto reveal">
+          <p class="eyebrow mb-4">Shop</p>
+          <h2 class="text-4xl sm:text-5xl text-forest">Shop by Category</h2>
+        </div>
+        <div class="mt-14 grid md:grid-cols-3 gap-6">
+          <a href="#bestsellers" class="group block reveal">
+            <div class="img-wrap aspect-[4/5]"><img data-img="cat-cleansers" alt="Botanical cleansers and care products on a mint background" loading="lazy" /></div>
+            <div class="pt-5 flex items-end justify-between">
+              <h3 class="text-3xl text-forest">Cleansers</h3>
+              <span class="link-line text-forest">Shop Now</span>
+            </div>
+          </a>
+          <a href="#bestsellers" class="group block reveal md:mt-12">
+            <div class="img-wrap aspect-[4/5]"><img data-img="cat-serums" alt="Serum dropper bottle with dried botanicals on a glass block" loading="lazy" /></div>
+            <div class="pt-5 flex items-end justify-between">
+              <h3 class="text-3xl text-forest">Botanical Serums</h3>
+              <span class="link-line text-forest">Shop Now</span>
+            </div>
+          </a>
+          <a href="#bestsellers" class="group block reveal">
+            <div class="img-wrap aspect-[4/5]"><img data-img="cat-moisturizers" alt="Green moisturizer tube with soft golden light" loading="lazy" /></div>
+            <div class="pt-5 flex items-end justify-between">
+              <h3 class="text-3xl text-forest">Moisturizers</h3>
+              <span class="link-line text-forest">Shop Now</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- G. Philosophy -->
+    <section id="philosophy" class="mx-auto max-w-7xl px-5 lg:px-10 py-20 lg:py-32 grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+      <div class="reveal">
+        <div class="img-wrap aspect-[4/5] max-w-lg mx-auto lg:mx-0">
+          <img data-img="philosophy" alt="Botanical body lotion with olive branch and white roses on stone" loading="lazy" />
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="eyebrow mb-5">Our Philosophy</p>
+        <h2 class="text-4xl sm:text-5xl xl:text-6xl text-forest leading-tight">Beauty, Rooted in Nature.</h2>
+        <p class="mt-7 text-lg leading-relaxed text-charcoal/80 max-w-lg">At OLIVÉRA, we believe skincare should feel like a gentle ritual. Inspired by the beauty of botanicals, our collection celebrates simplicity, thoughtful design and the quiet luxury of everyday self-care.</p>
+        <a href="#why" class="btn btn-primary mt-10">Discover Our Philosophy</a>
+      </div>
+    </section>
+
+    <!-- H. Why OLIVÉRA -->
+    <section id="why" class="bg-forest text-ivory py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-10">
+        <div class="text-center max-w-xl mx-auto reveal">
+          <p class="eyebrow !text-olive mb-4">Why OLIVÉRA</p>
+          <h2 class="text-4xl sm:text-5xl">A Quieter Kind of Luxury</h2>
+        </div>
+        <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12">
+          <article class="text-center reveal">
+            <svg class="mx-auto text-olive" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.1" viewBox="0 0 32 32"><path d="M6 27C10 17 17 10 27 5"/><path d="M12 21c-4-1-6-4-6-7 4 0 6 3 6 7ZM18 15c-4-1-6-4-6-7 4 0 6 3 6 7Z"/></svg>
+            <h3 class="mt-5 text-2xl">Botanical Inspiration</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ivory/70">Every product begins with the calm and character of the natural world.</p>
+          </article>
+          <article class="text-center reveal">
+            <svg class="mx-auto text-olive" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.1" viewBox="0 0 32 32"><circle cx="16" cy="16" r="5"/><path d="M16 3v4M16 25v4M3 16h4M25 16h4M7 7l3 3M22 22l3 3M25 7l-3 3M10 22l-3 3"/></svg>
+            <h3 class="mt-5 text-2xl">Simple Daily Rituals</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ivory/70">A small, considered routine that fits easily into your morning and evening.</p>
+          </article>
+          <article class="text-center reveal">
+            <svg class="mx-auto text-olive" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.1" viewBox="0 0 32 32"><rect x="7" y="12" width="18" height="16" rx="1"/><path d="M11 12V8h10v4M7 18h18"/></svg>
+            <h3 class="mt-5 text-2xl">Thoughtful Presentation</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ivory/70">Refined packaging in sage glass and ivory, designed to look beautiful on any shelf.</p>
+          </article>
+          <article class="text-center reveal">
+            <svg class="mx-auto text-olive" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.1" viewBox="0 0 32 32"><path d="M16 28c-8-5-12-10-12-15a7 7 0 0 1 12-5 7 7 0 0 1 12 5c0 5-4 10-12 15Z"/></svg>
+            <h3 class="mt-5 text-2xl">Beauty in Simplicity</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ivory/70">Less, but better — a focused collection with room to breathe.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- I. Editorial banner -->
+    <section class="relative isolate min-h-[28rem] lg:min-h-[36rem] flex items-center overflow-hidden bg-beige" aria-labelledby="banner-title">
+      <img data-img="banner" alt="OLIVÉRA skincare products among cream roses in soft sunlight" class="absolute inset-0 -z-10 w-full h-full object-cover" loading="lazy" />
+      <div class="absolute inset-0 -z-10 bg-forest/55"></div>
+      <div class="mx-auto max-w-7xl w-full px-5 lg:px-10 py-20 text-ivory reveal">
+        <h2 id="banner-title" class="text-5xl sm:text-6xl lg:text-7xl max-w-2xl leading-[1.05]">Slow Down. <em>Glow Naturally.</em></h2>
+        <p class="mt-5 text-lg text-ivory/90">Make space for a little everyday self-care.</p>
+        <a href="#bestsellers" class="btn btn-light mt-9">Explore the Collection</a>
+      </div>
+    </section>
+
+    <!-- J. Testimonials -->
+    <section id="testimonials" class="mx-auto max-w-7xl px-5 lg:px-10 py-20 lg:py-28">
+      <div class="text-center max-w-xl mx-auto reveal">
+        <p class="eyebrow mb-4">Kind Words</p>
+        <h2 class="text-4xl sm:text-5xl text-forest">Loved by Our Community</h2>
+        <p class="mt-4 text-xs text-charcoal/55">Sample testimonials for illustration only. Not verified customer reviews.</p>
+      </div>
+      <div class="mt-14 grid md:grid-cols-3 gap-6">
+        <figure class="bg-beige/60 p-8 lg:p-10 reveal">
+          <svg class="text-sage" width="28" height="22" viewBox="0 0 28 22" fill="currentColor" aria-hidden="true"><path d="M0 22V11C0 4 4 0 11 0v4C7 4 6 7 6 9h5v13H0Zm17 0V11c0-7 4-11 11-11v4c-4 0-5 3-5 5h5v13H17Z"/></svg>
+          <blockquote class="mt-5 font-serif text-2xl leading-snug text-forest">“The bottles alone make my shelf feel calmer. A lovely, quiet little ritual.”</blockquote>
+          <figcaption class="mt-6 text-xs tracking-[0.18em] uppercase text-charcoal/70">Jhon Danial <span class="block mt-1 text-charcoal/45 normal-case tracking-normal">Testimonial Daniel</span></figcaption>
+        </figure>
+        <figure class="bg-beige/60 p-8 lg:p-10 reveal">
+          <svg class="text-sage" width="28" height="22" viewBox="0 0 28 22" fill="currentColor" aria-hidden="true"><path d="M0 22V11C0 4 4 0 11 0v4C7 4 6 7 6 9h5v13H0Zm17 0V11c0-7 4-11 11-11v4c-4 0-5 3-5 5h5v13H17Z"/></svg>
+          <blockquote class="mt-5 font-serif text-2xl leading-snug text-forest">“Beautiful packaging and a gentle, fresh scent that makes my evenings feel slower.”</blockquote>
+          <figcaption class="mt-6 text-xs tracking-[0.18em] uppercase text-charcoal/70">Richard Hans <span class="block mt-1 text-charcoal/45 normal-case tracking-normal">Testimonial Hans</span></figcaption>
+        </figure>
+        <figure class="bg-beige/60 p-8 lg:p-10 reveal">
+          <svg class="text-sage" width="28" height="22" viewBox="0 0 28 22" fill="currentColor" aria-hidden="true"><path d="M0 22V11C0 4 4 0 11 0v4C7 4 6 7 6 9h5v13H0Zm17 0V11c0-7 4-11 11-11v4c-4 0-5 3-5 5h5v13H17Z"/></svg>
+          <blockquote class="mt-5 font-serif text-2xl leading-snug text-forest">“It feels like a boutique experience — simple, elegant and easy to love.”</blockquote>
+          <figcaption class="mt-6 text-xs tracking-[0.18em] uppercase text-charcoal/70">Sarah Johnson <span class="block mt-1 text-charcoal/45 normal-case tracking-normal">Testimonial Johnson</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- K. Newsletter -->
+    <section id="newsletter" class="bg-beige py-20 lg:py-24">
+      <div class="mx-auto max-w-2xl px-5 text-center reveal">
+        <h2 class="text-4xl sm:text-5xl text-forest">A Little Glow in Your Inbox</h2>
+        <p class="mt-4 text-charcoal/80">Join our botanical community for skincare inspiration and updates.</p>
+        <form id="newsletter-form" class="mt-9 flex flex-col sm:flex-row gap-3" novalidate>
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <input id="newsletter-email" type="email" name="email" placeholder="Your email address" autocomplete="email" class="flex-1 bg-ivory border border-olive px-5 py-4 text-sm placeholder:text-charcoal/40 focus:outline-none focus:border-forest" />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p id="newsletter-msg" class="mt-4 text-sm min-h-[1.25rem]" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- L. Footer -->
+  <footer id="contact" class="bg-forest text-ivory">
+    <div class="mx-auto max-w-7xl px-5 lg:px-10 pt-16 pb-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div>
+          <p class="font-serif text-3xl tracking-[0.28em]">OLIVÉRA</p>
+          <p class="text-[0.5rem] tracking-[0.42em] text-olive mt-1">BOTANICAL SKINCARE</p>
+          <p class="mt-5 text-sm leading-relaxed text-ivory/70 max-w-xs">Premium botanical skincare inspired by nature, thoughtful design and the quiet luxury of everyday rituals.</p>
+        </div>
+        <div>
+          <h3 class="eyebrow !text-olive !font-sans mb-5">Shop</h3>
+          <ul class="space-y-3 text-sm text-ivory/80">
+            <li><a class="hover:text-olive" href="#bestsellers">Best Sellers</a></li>
+            <li><a class="hover:text-olive" href="#categories">Cleansers</a></li>
+            <li><a class="hover:text-olive" href="#categories">Botanical Serums</a></li>
+            <li><a class="hover:text-olive" href="#categories">Moisturizers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="eyebrow !text-olive !font-sans mb-5">Information</h3>
+          <ul class="space-y-3 text-sm text-ivory/80">
+            <li><a class="hover:text-olive" href="#philosophy">Our Philosophy</a></li>
+            <li><a class="hover:text-olive" href="#why">Why OLIVÉRA</a></li>
+            <li><a class="hover:text-olive" href="#testimonials">Testimonials</a></li>
+            <li><a class="hover:text-olive" href="#newsletter">Newsletter Signup</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="eyebrow !text-olive !font-sans mb-5">Contact</h3>
+          <address class="not-italic space-y-3 text-sm text-ivory/80">
+            <p>123 Placeholder Lane<br />Sample City, 00000</p>
+            <p>hello@olivera.example</p>
+            <p>+1 (000) 000-0000</p>
+            <p class="text-xs text-ivory/45">Sample contact details.</p>
+          </address>
+          <div class="mt-6 flex gap-4">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hover:text-olive">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>
+            </a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" class="hover:text-olive">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M11 8c3-1 5 1 4 4s-3 3-4 2M11 9l-2 9"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="hover:text-olive">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-14 pt-6 border-t border-ivory/15 flex flex-col sm:flex-row justify-between gap-3 text-xs text-ivory/55">
+        <p>© <span id="year">2026</span> OLIVÉRA. All rights reserved.</p>
+        <p>Nature, Nurtured Into Beauty.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div id="overlay" class="fixed inset-0 z-50 bg-charcoal/50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <aside id="cart-drawer" class="fixed top-0 right-0 z-[60] h-full w-full max-w-md bg-ivory shadow-2xl translate-x-full transition-transform duration-500 flex flex-col" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true">
+    <div class="flex items-center justify-between px-6 h-20 border-b border-beige">
+      <h2 id="cart-title" class="text-3xl text-forest">Your Bag</h2>
+      <button id="cart-close" class="p-2 -mr-2" aria-label="Close shopping bag">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></svg>
+      </button>
+    </div>
+    <div id="free-ship" class="px-6 pt-4 text-xs text-charcoal/70"></div>
+    <ul id="cart-items" class="flex-1 overflow-y-auto px-6 py-4 divide-y divide-beige"></ul>
+    <div class="border-t border-beige p-6 bg-beige/40">
+      <div class="flex justify-between items-baseline">
+        <span class="text-xs tracking-[0.2em] uppercase">Subtotal</span>
+        <span id="cart-subtotal" class="font-serif text-3xl text-forest">$0.00</span>
+      </div>
+      <p class="text-xs text-charcoal/55 mt-1">Shipping calculated at checkout.</p>
+      <button id="checkout-btn" class="btn btn-primary w-full mt-5">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Search modal -->
+  <div id="search-modal" class="fixed inset-0 z-[70] hidden bg-charcoal/60 p-4 sm:pt-24" role="dialog" aria-modal="true" aria-label="Search products">
+    <div class="mx-auto max-w-xl bg-ivory p-6 shadow-2xl">
+      <div class="flex items-center gap-3 border-b border-olive pb-3">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <label for="search-input" class="sr-only">Search products</label>
+        <input id="search-input" type="search" placeholder="Search serums, cleansers, creams…" class="flex-1 bg-transparent focus:outline-none" autocomplete="off" />
+        <button id="search-close" class="text-xs tracking-[0.2em] uppercase">Close</button>
+      </div>
+      <ul id="search-results" class="mt-4 max-h-80 overflow-y-auto divide-y divide-beige"></ul>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[80] bg-forest text-ivory text-sm px-6 py-3 opacity-0 pointer-events-none transition-opacity duration-300" role="status" aria-live="polite"></div>
+</body>
+</html>
