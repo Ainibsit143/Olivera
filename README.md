@@ -1,5 +1,7 @@
 # OLIVÉRA — Botanical Skincare
 
+**Live site:** [ainibsit143.github.io/Olivera](https://ainibsit143.github.io/Olivera/)
+
 A responsive e-commerce storefront for a botanical skincare brand, built with HTML, Tailwind CSS and vanilla JavaScript.
 
 > **Note:** This is a frontend practice project. The brand, products, testimonials and contact details are sample content. There is no backend: checkout, payments and the newsletter form do not process real orders or store emails.
